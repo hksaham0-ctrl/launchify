@@ -1489,6 +1489,47 @@
         font-size: 0.95rem !important;
     }
 }
+
+/* === MOBILE NAVIGATION FIX === */
+
+/* Hide desktop CTA button on mobile */
+@media (max-width: 768px) {
+    .desktop-only {
+        display: none !important;
+    }
+    
+    .mobile-only {
+        display: block !important;
+    }
+}
+
+/* Show desktop CTA button on larger screens */
+@media (min-width: 769px) {
+    .desktop-only {
+        display: flex !important;
+    }
+    
+    .mobile-only {
+        display: none !important;
+    }
+}
+
+/* Style the mobile menu CTA differently */
+.nav-cta-mobile {
+    background: linear-gradient(135deg, var(--emerald-medium) 0%, var(--emerald-light) 100%);
+    color: white !important;
+    padding: 12px 20px !important;
+    border-radius: 25px !important;
+    margin-top: 10px !important;
+    display: inline-block !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+}
+
+.nav-cta-mobile:hover {
+    background: var(--emerald-light) !important;
+    transform: translateY(-2px) !important;
+}
     </style>
 </head>
 <body>
@@ -1519,9 +1560,10 @@
                     <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li class="mobile-only"><a href="#contact" class="nav-cta-mobile">Work With Us</a></li>
                 </ul>
                 
-                <div class="nav-cta">
+                <div class="nav-cta desktop-only">
                     <a href="#contact" class="btn btn-primary">Work With Us</a>
                 </div>
                 
