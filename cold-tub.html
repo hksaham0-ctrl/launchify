@@ -70,7 +70,7 @@
         },
         "offers": {
             "@type": "Offer",
-            "url": "https://yourshop.example.com",
+            "url": "demo.html",
             "priceCurrency": "USD",
             "price": "9999",
             "priceValidUntil": "2024-12-31",
@@ -2114,6 +2114,43 @@ img, video, iframe {
     }
 }
 
+/* Product Image Styles */
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--radius-2xl);
+    transition: transform 0.5s ease;
+}
+
+.product-3d:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* Experience Image Styles */
+.experience-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.experience-card:hover .experience-image {
+    transform: scale(1.05);
+}
+
+/* Ensure proper image loading */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
     </style>
 </head>
 <body>
@@ -2217,7 +2254,7 @@ img, video, iframe {
                 </div>
                 
                 <div class="hero-cta">
-                    <a href="https://yourshop.example.com" class="btn btn-primary" id="main-cta-hero" aria-label="Buy the ArcticFlow Cold Plunge — Shop">Buy Now — Shop</a>
+                    <a href="demo.html" class="btn btn-primary" id="main-cta-hero" aria-label="Buy the ArcticFlow Cold Plunge — Shop">Buy Now — Shop</a>
                     <button class="btn btn-secondary" id="reserve-demo">Reserve a Demo</button>
                 </div>
             </div>
@@ -2225,8 +2262,7 @@ img, video, iframe {
             <div class="hero-visual">
                 <div class="product-visual">
                     <div class="product-3d" id="product-3d">
-                        <!-- LOTTIE: product-rotation-animation.json -->
-                        <!-- FALLBACK_IMAGE: product-hero-3d.jpg -->
+                     <img src="images/arcticflow-product-hero.webp" alt="ArcticFlow Premium Cold Plunge Tub - Luxury portable recovery system" class="product-image" loading="eager">
                     </div>
                 </div>
             </div>
@@ -2332,6 +2368,7 @@ img, video, iframe {
             <div class="experience-grid">
                 <div class="experience-card">
                     <!-- EXPERIENCE_IMAGE_1: morning-reset-lifestyle.jpg -->
+                     <img src="images/morning-reset-lifestyle.webp" alt="Person enjoying morning cold plunge ritual" class="experience-image" loading="lazy">
                     <div class="experience-overlay"></div>
                     <div class="experience-content">
                         <h3 class="experience-title">Morning Reset</h3>
@@ -2343,6 +2380,7 @@ img, video, iframe {
                 
                 <div class="experience-card">
                     <!-- EXPERIENCE_IMAGE_2: post-workout-recovery.jpg -->
+                     <img src="images/post-workout-recovery.webp" alt="Athlete using cold plunge for post-workout recovery" class="experience-image" loading="lazy">
                     <div class="experience-overlay"></div>
                     <div class="experience-content">
                         <h3 class="experience-title">Post-Workout Recovery</h3>
@@ -2354,6 +2392,7 @@ img, video, iframe {
                 
                 <div class="experience-card">
                     <!-- EXPERIENCE_IMAGE_3: corporate-wellness.jpg -->
+                      <img src="images/corporate-wellness.webp" alt="Executive using cold plunge in corporate wellness setting" class="experience-image" loading="lazy">
                     <div class="experience-overlay"></div>
                     <div class="experience-content">
                         <h3 class="experience-title">Corporate Wellness</h3>
@@ -2795,7 +2834,7 @@ img, video, iframe {
             </div>
             
             <div class="text-center mt-16">
-                <a href="https://yourshop.example.com" class="btn btn-primary btn-lg" id="main-cta-trust">Reserve Your ArcticFlow</a>
+                <a href="demo.html" class="btn btn-primary btn-lg" id="main-cta-trust">Reserve Your ArcticFlow</a>
                 <p class="mt-4 text-color-text-tertiary">
                     Limited white-glove installation slots available. Reserve today to secure priority scheduling.
                 </p>
@@ -2897,7 +2936,7 @@ img, video, iframe {
             </div>
             
             <div class="sticky-cta">
-                <a href="https://yourshop.example.com" class="btn btn-primary" id="main-cta-sticky">Buy Now</a>
+                <a href="demo.html" class="btn btn-primary" id="main-cta-sticky">Buy Now</a>
             </div>
         </div>
     </div>
@@ -4018,6 +4057,37 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     console.log('🎭 Luxury Animations Loaded!');
+});
+
+// Add to your existing JavaScript
+function initImageLoading() {
+    // Lazy loading enhancement
+    const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+    
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
+            });
+        });
+
+        lazyImages.forEach(img => imageObserver.observe(img));
+    } else {
+        // Fallback for browsers without IntersectionObserver
+        lazyImages.forEach(img => {
+            img.classList.add('loaded');
+        });
+    }
+}
+
+// Call this in your DOMContentLoaded event
+document.addEventListener('DOMContentLoaded', () => {
+    initImageLoading();
+    // ... your other initialization code
 });
 
     </script>
