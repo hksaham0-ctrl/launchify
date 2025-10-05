@@ -509,6 +509,147 @@
             mix-blend-mode: difference;
             transition: transform 0.1s ease;
         }
+
+        /* ===== LUXURY ENTRANCE ANIMATIONS ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays for sequential animation */
+.animate-delay-1 { transition-delay: 0.1s; }
+.animate-delay-2 { transition-delay: 0.2s; }
+.animate-delay-3 { transition-delay: 0.3s; }
+.animate-delay-4 { transition-delay: 0.4s; }
+.animate-delay-5 { transition-delay: 0.5s; }
+
+/* Special hero entrance */
+.hero-entrance {
+    opacity: 0;
+    transform: translateY(80px) scale(0.95);
+    animation: heroEntrance 1.2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+@keyframes heroEntrance {
+    0% {
+        opacity: 0;
+        transform: translateY(80px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Floating elements */
+.float-in {
+    animation: floatIn 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+@keyframes floatIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scale in animation */
+.scale-in {
+    animation: scaleIn 0.8s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+@keyframes scaleIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Slide in from sides */
+.slide-in-left {
+    animation: slideInLeft 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    opacity: 0;
+    transform: translateX(-80px);
+}
+
+.slide-in-right {
+    animation: slideInRight 1s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+    opacity: 0;
+    transform: translateX(80px);
+}
+
+@keyframes slideInLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Typewriter effect for hero text */
+.typewriter {
+    overflow: hidden;
+    border-right: 3px solid var(--emerald-light);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: var(--emerald-light) }
+}
+
+/* Glow pulse for important elements */
+.glow-pulse {
+    animation: glowPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {
+        box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+    }
+    to {
+        box-shadow: 0 0 30px rgba(16, 185, 129, 0.6), 0 0 40px rgba(16, 185, 129, 0.4);
+    }
+}
+
+/* Page load animation */
+.page-load {
+    animation: pageLoad 1.5s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+}
+
+@keyframes pageLoad {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
     </style>
 </head>
 <body>
@@ -707,6 +848,86 @@
         });
 
         console.log('🚀 Launchify Demo Page Loaded Successfully!');
+
+        // ===== LUXURY ENTRANCE ANIMATIONS =====
+document.addEventListener('DOMContentLoaded', function() {
+    // Initial page load animations
+    setTimeout(() => {
+        // Hero section entrance
+        const heroContent = document.querySelector('.hero-content');
+        if (heroContent) {
+            heroContent.classList.add('hero-entrance');
+        }
+        
+        // Header animation
+        const header = document.getElementById('header');
+        if (header) {
+            header.style.opacity = '0';
+            header.style.transform = 'translateY(-100%)';
+            setTimeout(() => {
+                header.style.transition = 'all 0.8s cubic-bezier(0.215, 0.610, 0.355, 1)';
+                header.style.opacity = '1';
+                header.style.transform = 'translateY(0)';
+            }, 500);
+        }
+    }, 300);
+    
+    // Scroll-triggered animations
+    const scrollElements = document.querySelectorAll('.animate-on-scroll');
+    
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('animated');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 1.2)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+    
+    // Initialize
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // Initial check
+    handleScrollAnimation();
+    
+    // Add hover effects to cards
+    document.querySelectorAll('.about-card, .portfolio-item, .feature-card').forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-15px) rotate(1deg)';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0) rotate(0)';
+        });
+    });
+    
+    // Parallax effect for hero background
+    window.addEventListener('scroll', function() {
+        const scrolled = window.pageYOffset;
+        const hero = document.querySelector('.hero');
+        if (hero) {
+            const heroBg = hero.querySelector('.hero-bg-elements');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        }
+    });
+    
+    console.log('🎭 Luxury Animations Loaded!');
+});
+
     </script>
 </body>
 </html>
