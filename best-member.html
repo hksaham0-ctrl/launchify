@@ -1,0 +1,1617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Admin Award 2025 - Royal Excellence Recognition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* ===== CSS RESET & VARIABLES ===== */
+        :root {
+            --royal-purple: #2D1B69;
+            --deep-navy: #0A0F2D;
+            --rich-gold: #D4AF37;
+            --gold-light: #F4E4A6;
+            --gold-dark: #B8860B;
+            --cream: #F8F4E9;
+            --silver: #C0C0C0;
+            --text-light: #FFFFFF;
+            --text-dark: #1A1A1A;
+            --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.4);
+            --shadow-strong: 0 0 30px rgba(212, 175, 55, 0.6);
+            --transition-slow: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-medium: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            --transition-fast: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Cormorant Garamond', serif;
+            background: linear-gradient(135deg, var(--deep-navy) 0%, var(--royal-purple) 100%);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 90% 60%, rgba(212, 175, 55, 0.03) 0%, transparent 20%),
+                radial-gradient(circle at 50% 80%, rgba(45, 27, 105, 0.05) 0%, transparent 20%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* ===== TYPOGRAPHY ===== */
+        h1, h2, h3, h4, h5 {
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--gold-light), var(--rich-gold), var(--gold-dark));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: var(--shadow-glow);
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: var(--gold-light);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 2rem;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--rich-gold), transparent);
+        }
+
+        h3 {
+            font-size: 1.8rem;
+            color: var(--gold-light);
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+        }
+
+        .lead {
+            font-size: 1.4rem;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* ===== LAYOUT & CONTAINERS ===== */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        section {
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--rich-gold), transparent);
+            margin: 2rem 0;
+        }
+
+        /* ===== BUTTONS ===== */
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--rich-gold);
+            background: transparent;
+            color: var(--rich-gold);
+            font-family: 'Cinzel', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: var(--transition-medium);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+            transition: var(--transition-medium);
+            z-index: -1;
+        }
+
+        .btn:hover {
+            color: var(--deep-navy);
+            background: var(--rich-gold);
+            box-shadow: var(--shadow-strong);
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            color: var(--deep-navy);
+            border: none;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, var(--gold-light), var(--rich-gold));
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes glow {
+            0%, 100% {
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.6);
+            }
+            50% {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.9), 0 0 30px rgba(212, 175, 55, 0.6);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+
+        .animate-fade-in-left {
+            animation: fadeInLeft 1s ease-out forwards;
+        }
+
+        .animate-fade-in-right {
+            animation: fadeInRight 1s ease-out forwards;
+        }
+
+        .animate-glow {
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 0;
+            transition: var(--transition-medium);
+            background: rgba(10, 15, 45, 0.8);
+            backdrop-filter: blur(10px);
+        }
+
+        header.scrolled {
+            padding: 0.5rem 0;
+            background: rgba(10, 15, 45, 0.95);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-family: 'Cinzel', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--gold-light), var(--rich-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition-fast);
+            position: relative;
+        }
+
+        nav a::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--rich-gold);
+            transition: var(--transition-medium);
+        }
+
+        nav a:hover {
+            color: var(--gold-light);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(212, 175, 55, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(45, 27, 105, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(10, 15, 45, 0.2) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .royal-crest {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: var(--shadow-strong);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .royal-crest::before {
+            content: "";
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border: 2px solid var(--rich-gold);
+            border-radius: 50%;
+            opacity: 0.5;
+            animation: glow 4s ease-in-out infinite;
+        }
+
+        .royal-crest-inner {
+            width: 120px;
+            height: 120px;
+            background: var(--deep-navy);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--rich-gold);
+            font-size: 3rem;
+        }
+
+        .hero h1 {
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeInDown 1s ease-out 0.5s forwards;
+        }
+
+        .hero .lead {
+            margin-bottom: 2rem;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1s forwards;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            opacity: 0;
+            animation: fadeInUp 1s ease-out 1.5s forwards;
+        }
+
+        /* ===== WINNER SHOWCASE ===== */
+        .winner-showcase {
+            background: linear-gradient(135deg, rgba(10, 15, 45, 0.9) 0%, rgba(45, 27, 105, 0.7) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .winner-container {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .winner-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            position: relative;
+        }
+
+        .winner-frame {
+            width: 350px;
+            height: 350px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            padding: 10px;
+            box-shadow: var(--shadow-strong);
+            position: relative;
+            transition: var(--transition-medium);
+        }
+
+        .winner-frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 40px rgba(212, 175, 55, 0.8);
+        }
+
+        .winner-frame::before {
+            content: "";
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            right: -5px;
+            bottom: -5px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark), var(--gold-light));
+            z-index: -1;
+            opacity: 0.7;
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .winner-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--deep-navy), var(--royal-purple));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: 5rem;
+            overflow: hidden;
+        }
+
+        .winner-details {
+            flex: 1;
+        }
+
+        .winner-name {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--gold-light), var(--rich-gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: var(--shadow-glow);
+        }
+
+        .winner-subtitle {
+            font-size: 1.5rem;
+            color: var(--gold-light);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .winner-bio {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .winner-stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--rich-gold);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--gold-light);
+        }
+
+        /* ===== CERTIFICATE SECTION ===== */
+        .certificate-section {
+            background: linear-gradient(135deg, rgba(248, 244, 233, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+            position: relative;
+        }
+
+        .certificate-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .certificate {
+            width: 100%;
+            max-width: 800px;
+            background: linear-gradient(135deg, var(--cream) 0%, #f0e8d0 100%);
+            border: 20px solid transparent;
+            border-image: linear-gradient(45deg, var(--rich-gold), var(--gold-dark), var(--rich-gold)) 1;
+            padding: 3rem;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            position: relative;
+            color: var(--text-dark);
+            margin-top: 2rem;
+        }
+
+        .certificate::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23D4AF37" stroke-width="0.5" opacity="0.2"/></svg>');
+            pointer-events: none;
+        }
+
+        .certificate-header {
+            margin-bottom: 2rem;
+        }
+
+        .certificate-title {
+            font-size: 2.5rem;
+            color: var(--deep-navy);
+            margin-bottom: 0.5rem;
+        }
+
+        .certificate-subtitle {
+            font-size: 1.2rem;
+            color: var(--royal-purple);
+            font-style: italic;
+        }
+
+        .certificate-body {
+            margin-bottom: 2rem;
+        }
+
+        .certificate-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .certificate-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-top: 3rem;
+        }
+
+        .signature-area {
+            text-align: center;
+        }
+
+        .signature-line {
+            width: 200px;
+            height: 1px;
+            background: var(--text-dark);
+            margin: 0.5rem auto;
+        }
+
+        .seal {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-align: center;
+            line-height: 1.2;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* ===== GALLERY SECTION ===== */
+        .gallery-section {
+            background: linear-gradient(135deg, rgba(10, 15, 45, 0.9) 0%, rgba(45, 27, 105, 0.7) 100%);
+        }
+
+        .gallery-container {
+            position: relative;
+        }
+
+        .gallery {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery-slide {
+            min-width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--gold-light);
+            background: linear-gradient(135deg, var(--deep-navy), var(--royal-purple));
+            transition: var(--transition-slow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gallery-slide::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+        }
+
+        .gallery-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-dots {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .gallery-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--silver);
+            cursor: pointer;
+            transition: var(--transition-fast);
+        }
+
+        .gallery-dot.active {
+            background: var(--rich-gold);
+            transform: scale(1.2);
+        }
+
+        /* ===== TIMELINE SECTION ===== */
+        .timeline-section {
+            background: linear-gradient(135deg, rgba(248, 244, 233, 0.05) 0%, rgba(212, 175, 55, 0.05) 100%);
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: linear-gradient(to bottom, transparent, var(--rich-gold), transparent);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) {
+            flex-direction: row;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            padding: 2rem;
+            background: linear-gradient(135deg, rgba(10, 15, 45, 0.8) 0%, rgba(45, 27, 105, 0.6) 100%);
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            transition: var(--transition-medium);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.3);
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            box-shadow: var(--shadow-glow);
+            z-index: 2;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-year {
+            right: -40px;
+        }
+
+        .timeline-item:nth-child(even) .timeline-year {
+            left: -40px;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 0.5rem;
+            color: var(--gold-light);
+        }
+
+        .timeline-content p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        /* ===== TESTIMONIALS SECTION ===== */
+        .testimonials-section {
+            background: linear-gradient(135deg, rgba(10, 15, 45, 0.9) 0%, rgba(45, 27, 105, 0.7) 100%);
+        }
+
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(248, 244, 233, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 10px;
+            padding: 2rem;
+            transition: var(--transition-medium);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="%23D4AF37" stroke-width="0.5" opacity="0.1"/></svg>');
+            pointer-events: none;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(212, 175, 55, 0.2);
+            border-color: rgba(212, 175, 55, 0.5);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .testimonial-text::before {
+            content: """;
+            position: absolute;
+            top: -10px;
+            left: 0;
+            font-size: 3rem;
+            color: var(--rich-gold);
+            opacity: 0.5;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--rich-gold), var(--gold-dark));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--deep-navy);
+            font-weight: bold;
+        }
+
+        .author-info h4 {
+            margin-bottom: 0.2rem;
+            color: var(--gold-light);
+        }
+
+        .author-info p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+            color: var(--silver);
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #050920 100%);
+            padding: 4rem 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--rich-gold), transparent);
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--gold-light);
+            position: relative;
+            display: inline-block;
+        }
+
+        .footer-col h3::after {
+            content: "";
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50%;
+            height: 2px;
+            background: var(--rich-gold);
+        }
+
+        .footer-col p {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .social-link:hover {
+            background: var(--rich-gold);
+            color: var(--deep-navy);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition-fast);
+            position: relative;
+            padding-left: 1rem;
+        }
+
+        .footer-links a::before {
+            content: "»";
+            position: absolute;
+            left: 0;
+            color: var(--rich-gold);
+            transition: var(--transition-fast);
+        }
+
+        .footer-links a:hover {
+            color: var(--gold-light);
+            padding-left: 1.5rem;
+        }
+
+        .footer-links a:hover::before {
+            left: 0.2rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            position: relative;
+        }
+
+        .footer-bottom::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 1px;
+            background: var(--rich-gold);
+        }
+
+        .made-with-love {
+            font-size: 1rem;
+            color: var(--gold-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .made-with-love span {
+            color: #ff6b6b;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .winner-container {
+                flex-direction: column;
+                gap: 2rem;
+            }
+            
+            .winner-details {
+                text-align: center;
+            }
+            
+            .winner-stats {
+                justify-content: center;
+            }
+            
+            .timeline::before {
+                left: 30px;
+            }
+            
+            .timeline-item {
+                flex-direction: row !important;
+                justify-content: flex-start;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 80px);
+                margin-left: 80px;
+            }
+            
+            .timeline-year {
+                left: 0 !important;
+                right: auto !important;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .winner-frame {
+                width: 280px;
+                height: 280px;
+            }
+            
+            .winner-name {
+                font-size: 2.5rem;
+            }
+            
+            .certificate {
+                padding: 2rem 1.5rem;
+            }
+            
+            .certificate-title {
+                font-size: 2rem;
+            }
+            
+            .certificate-footer {
+                flex-direction: column;
+                gap: 2rem;
+                align-items: center;
+            }
+            
+            .gallery {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .royal-crest {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .royal-crest-inner {
+                width: 90px;
+                height: 90px;
+                font-size: 2rem;
+            }
+            
+            .winner-frame {
+                width: 220px;
+                height: 220px;
+            }
+            
+            .winner-name {
+                font-size: 2rem;
+            }
+            
+            .winner-stats {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .timeline-content {
+                padding: 1.5rem;
+            }
+            
+            .testimonials-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <div class="logo-icon">BAA</div>
+                <div class="logo-text">Best Admin Awards</div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#winner">Winner</a></li>
+                    <li><a href="#certificate">Certificate</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#timeline">Timeline</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                </ul>
+                <button class="mobile-menu-btn">☰</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-content">
+            <div class="royal-crest animate-float">
+                <div class="royal-crest-inner">👑</div>
+            </div>
+            <h1>Best Admin Award 2025</h1>
+            <p class="lead">"Awarded for outstanding leadership, dedication, and exceptional community service."</p>
+            <div class="hero-btns">
+                <a href="#winner" class="btn btn-gold">Meet the Winner</a>
+                <a href="#certificate" class="btn">View Certificate</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Winner Showcase -->
+    <section class="winner-showcase" id="winner">
+        <div class="container winner-container">
+            <div class="winner-image">
+                <div class="winner-frame animate-glow">
+                    <div class="winner-img">👨‍💼</div>
+                </div>
+            </div>
+            <div class="winner-details">
+                <h1 class="winner-name">HK SAHAM</h1>
+                <p class="winner-subtitle">Time Pass [CTG]</p>
+                <p class="winner-bio">
+                    With over 5 years of dedicated service, Johnathan has transformed our community into a vibrant, 
+                    engaging, and supportive space. His innovative leadership, unwavering commitment, and genuine 
+                    care for every member have set a new standard for excellence in community administration.
+                </p>
+                <p class="winner-bio">
+                    Under his guidance, our community has grown by 300% while maintaining the intimate, friendly 
+                    atmosphere that makes it so special. Johnathan's ability to resolve conflicts, inspire participation, 
+                    and foster genuine connections has made him an irreplaceable asset to our community.
+                </p>
+                <div class="winner-stats">
+                    <div class="stat">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label">Years of Service</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Members</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Section -->
+    <section class="certificate-section" id="certificate">
+        <div class="container certificate-container">
+            <h2>Royal Certificate of Excellence</h2>
+            <div class="certificate">
+                <div class="certificate-header">
+                    <h1 class="certificate-title">Certificate of Excellence</h1>
+                    <p class="certificate-subtitle">Best Admin Award 2025</p>
+                </div>
+                <div class="certificate-body">
+                    <p class="certificate-text">
+                        This is to certify that <strong>HK Saham</strong> has been awarded the 
+                        <strong>Best Admin Award 2025</strong> in recognition of exceptional leadership, 
+                        outstanding dedication, and invaluable contributions to the Time Pass [CTG].
+                    </p>
+                    <p class="certificate-text">
+                        Through visionary leadership and unwavering commitment, Saham has elevated 
+                        community standards, fostered meaningful engagement, and created an environment 
+                        where every member feels valued and heard.
+                    </p>
+                    <p class="certificate-text">
+                        This award celebrates the remarkable impact of his service and sets a benchmark 
+                        for excellence in community administration.
+                    </p>
+                </div>
+                <div class="certificate-footer">
+                    <div class="signature-area">
+                        <div class="signature-line"></div>
+                        <p>Chairman, Awards Committee</p>
+                    </div>
+                    <div class="seal">
+                        TP [CTG]
+                    </div>
+                    <div class="signature-area">
+                        <div class="signature-line"></div>
+                        <p>Community Founder</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section" id="gallery">
+        <div class="container gallery-container">
+            <h2>Memorable Moments</h2>
+            <div class="gallery">
+                <div class="gallery-slide">📸</div>
+                <div class="gallery-slide">🎉</div>
+                <div class="gallery-slide">🏆</div>
+                <div class="gallery-slide">👥</div>
+                <div class="gallery-slide">💬</div>
+            </div>
+            <div class="gallery-controls">
+                <div class="gallery-dots">
+                    <div class="gallery-dot active"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                    <div class="gallery-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="container">
+            <h2>Journey of Excellence</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Community Member</h3>
+                        <p>Joined the community as an active participant, quickly standing out with valuable contributions.</p>
+                    </div>
+                    <div class="timeline-year">2020</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Moderator Role</h3>
+                        <p>Promoted to moderator for demonstrating exceptional understanding of community values.</p>
+                    </div>
+                    <div class="timeline-year">2021</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Lead Moderator</h3>
+                        <p>Took on leadership of moderation team, implementing new engagement strategies.</p>
+                    </div>
+                    <div class="timeline-year">2022</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Administrator</h3>
+                        <p>Appointed as full administrator with responsibilities for community growth and development.</p>
+                    </div>
+                    <div class="timeline-year">2023</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Community Growth</h3>
+                        <p>Led initiatives that resulted in 150% member growth while improving engagement metrics.</p>
+                    </div>
+                    <div class="timeline-year">2024</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Best Admin Award</h3>
+                        <p>Received the prestigious Best Admin Award 2025 for outstanding leadership and service.</p>
+                    </div>
+                    <div class="timeline-year">2025</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <h2>Praise & Recognition</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        Johnathan's leadership has transformed our community. His dedication is unmatched, 
+                        and he always finds time for every member, no matter how busy he is.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <p>Community Member since 2020</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        The way Johnathan handles difficult situations with grace and fairness is remarkable. 
+                        He's created an environment where everyone feels safe to express themselves.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <h4>Michael Roberts</h4>
+                            <p>Moderator Team</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">
+                        Under Johnathan's guidance, our community has flourished beyond expectations. 
+                        His innovative approaches to engagement have set new standards for online communities.
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">ED</div>
+                        <div class="author-info">
+                            <h4>Emily Davis</h4>
+                            <p>Community Founder</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Best Admin Awards</h3>
+                    <p>Recognizing excellence in community leadership and administration since 2020.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">f</a>
+                        <a href="#" class="social-link">t</a>
+                        <a href="#" class="social-link">in</a>
+                        <a href="#" class="social-link">ig</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#winner">Winner</a></li>
+                        <li><a href="#certificate">Certificate</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#timeline">Timeline</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <p>Email: info@bestadminawards.com</p>
+                    <p>Phone: +1 (555) 123-4567</p>
+                    <p>Address: 123 Royal Avenue, Premium Plaza</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="made-with-love">
+                    Made with <span>❤️</span> for TIME PASS [CTG]
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Gallery functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.gallery-slide');
+            const dots = document.querySelectorAll('.gallery-dot');
+            let currentSlide = 0;
+            const slideCount = slides.length;
+
+            // Initialize gallery
+            function showSlide(n) {
+                slides.forEach(slide => {
+                    slide.style.transform = `translateX(-${n * 100}%)`;
+                });
+                
+                dots.forEach(dot => dot.classList.remove('active'));
+                dots[n].classList.add('active');
+                
+                currentSlide = n;
+            }
+
+            // Dot click events
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', function() {
+                    showSlide(index);
+                });
+            });
+
+            // Auto slide
+            setInterval(() => {
+                currentSlide = (currentSlide + 1) % slideCount;
+                showSlide(currentSlide);
+            }, 5000);
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const nav = document.querySelector('nav ul');
+            
+            mobileMenuBtn.addEventListener('click', function() {
+                if (nav.style.display === 'flex') {
+                    nav.style.display = 'none';
+                } else {
+                    nav.style.display = 'flex';
+                    nav.style.flexDirection = 'column';
+                    nav.style.position = 'absolute';
+                    nav.style.top = '100%';
+                    nav.style.left = '0';
+                    nav.style.right = '0';
+                    nav.style.background = 'rgba(10, 15, 45, 0.95)';
+                    nav.style.padding = '1rem';
+                    nav.style.gap = '1rem';
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        // Close mobile menu if open
+                        if (window.innerWidth <= 768) {
+                            nav.style.display = 'none';
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+
+            // Observe elements for animation
+            document.querySelectorAll('.winner-details, .certificate, .timeline-content, .testimonial-card').forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(30px)';
+                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
